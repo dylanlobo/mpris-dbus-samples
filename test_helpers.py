@@ -5,6 +5,7 @@ import helpers
 class TestHelpers(unittest.TestCase):
     def test_to_microsecs(self):
         self.assertEqual(helpers.to_microsecs("00:00:00"), 0)
+        self.assertEqual(helpers.to_microsecs("00:00:01"), 1000000)
         self.assertEqual(helpers.to_microsecs("99:59:59"), 359999000000)
 
         self.assertRaises(ValueError, helpers.to_microsecs, "00:00:0")
