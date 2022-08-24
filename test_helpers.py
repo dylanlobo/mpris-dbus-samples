@@ -11,6 +11,7 @@ class TestHelpers(unittest.TestCase):
         self.assertRaises(ValueError, helpers.to_microsecs, "-00:00:0")
         self.assertRaises(ValueError, helpers.to_microsecs, "0:00:00")
         self.assertRaises(ValueError, helpers.to_microsecs, "00:0:00")
+        self.assertRaises(ValueError, helpers.to_microsecs, "00:00:00:00")
         self.assertRaises(ValueError, helpers.to_microsecs, "99:99:99")
         self.assertRaises(ValueError, helpers.to_microsecs, "19:59:99")
         self.assertRaises(ValueError, helpers.to_microsecs, "19:99:59")
