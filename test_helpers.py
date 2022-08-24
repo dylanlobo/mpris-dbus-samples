@@ -23,6 +23,10 @@ class TestHelpers(unittest.TestCase):
 
     def test_to_HHMMSS(self):
         self.assertEqual(helpers.to_HHMMSS(0), "00:00:00")
+        self.assertEqual(helpers.to_HHMMSS(1), "00:00:00")
+        self.assertEqual(helpers.to_HHMMSS(100000), "00:00:00")
+        self.assertEqual(helpers.to_HHMMSS(100000), "00:00:00")
+        self.assertEqual(helpers.to_HHMMSS(1000000), "00:00:01")
         self.assertEqual(helpers.to_HHMMSS(359999000000), "99:59:59")
         self.assertEqual(helpers.to_HHMMSS(1), "00:00:00")
 
